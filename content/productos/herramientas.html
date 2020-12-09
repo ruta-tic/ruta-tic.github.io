@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Herramientas de Software</title>
     <link rel="icon" href="img/icono.png" type="image/png" />
-    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="../../css/styles.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../../css/mobile.css" media="only screen and (max-width: 700px)">
@@ -54,11 +53,39 @@
                     <h2>Herramientas de Software</h2>
                     <p>Praesent eu porttitor sapien. Pellentesque euismod ante eget porttitor faucibus. Duis lectus sapien, elementum id porttitor sit amet, venenatis at lacus. Praesent fringilla enim ultricies justo sagittis auctor. Pellentesque faucibus elit sit amet est bibendum aliquet. Pellentesque ut eros nec sapien eleifend placerat. Suspendisse ultrices lacus ut erat dapibus, nec blandit nisl venenatis. Quisque urna nunc, dignissim quis aliquam at, ultrices eu lacus. Maecenas iaculis enim sit amet risus consequat, tempor porttitor leo viverra.</p>
                 </div>
-                <div class="col-2 img">
-                    <img src="../eventos/eventos_edutec.png" alt="EDUTEC 2019" />
+                <div class="col-2">
+                    <h1>Imágenes de prueba</h1>
+                    <div class="slider">
+                        <img class="slide-img" src="herramientas/prueba1.png">
+                        <img class="slide-img" src="herramientas/prueba2.png">
+                        <img class="slide-img" src="herramientas/prueba3.png">
+
+                        <button class="left" onclick="current(-1)"><div class="icono flecha-atras"></button>
+                        <button class="right" onclick="current(1)"><div class="icono flecha-adelante"></div></button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+<script>
+    var slide_index = 1;
+    show_img(slide_index);
+
+    function current(n) {
+        show_img(slide_index += n);
+    }
+
+    function show_img(n) {
+        var i;
+        var x = document.getElementsByClassName("slide-img");
+        if (n > x.length) {slide_index = 1}
+        if (n < 1) {slide_index = x.length}
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+        }
+        x[slide_index-1].style.display = "block";  
+    }
+</script>
 </body>
 </html>

@@ -1370,6 +1370,7 @@ footer a:hover {
     min-width: 30%;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 #interactivos .iconos {
@@ -1421,6 +1422,19 @@ footer a:hover {
     border-right: 1px solid #f3f3f3;
     padding: 5px 20px;
     cursor: pointer;
+    filter: grayscale(1);
+}
+
+#scorm .contenidos .cont .info a {
+    text-decoration: none;
+}
+
+#scorm .contenidos .cont .info:hover {
+    filter: grayscale(0);
+}
+
+#scorm .contenidos .cont .info a:hover {
+    color: #b9eaff;
 }
 
 #scorm .contenidos .cont .prev {
@@ -1431,13 +1445,22 @@ footer a:hover {
 }
 
 #scorm .contenidos .cont .name {
-    min-width: 200px;
+    min-width: 250px;
     font-size: 18px;
     border-right: 1px solid #f3f3f3;
     padding-right: 20px;
 }
 
-#scorm .contenidos .description {padding: 5px 20px;}
+#scorm .contenidos .description {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+}
+
+#scorm .contenidos .description p {
+    width: 70%;
+    margin-right: 10px;
+}
 
 #scorm .iconos .download {
     background: url(../img/spritesheet2.png) no-repeat;
@@ -1568,6 +1591,13 @@ footer a:hover {
     padding-right: 2%;
 }
 /********************************************************************************/
+/* Perceptio
+/********************************************************************************/
+#perceptio {
+    max-width: 1200px;
+    margin: auto;
+}
+/********************************************************************************/
 /* Tables
 /********************************************************************************/
 .datatable {
@@ -1610,7 +1640,8 @@ footer a:hover {
 /********************************************************************************/
 .preview {max-width: 100%;}
 
-.expand-image a {
+#interactivos.expand-image a,
+.expand-image a.prev {
     width: 150px;
     position: relative;
     transition: all .3s;
@@ -1622,9 +1653,11 @@ footer a:hover {
     transition: all .3s;
 }
 
-.expand-image a {position: relative;}
+#interactivos.expand-image a,
+.expand-image a.prev {position: relative;}
 
-.expand-image a:after {
+#interactivos.expand-image a:after,
+.expand-image a.prev:after {
     content: "ver vista previa";
     position: absolute;
     width: 100%;
@@ -1636,4 +1669,35 @@ footer a:hover {
     /*z-index: 1;*/
     background-color: #777;
     color: #fff;
+}
+/********************************************************************************/
+/* SLIDER
+/********************************************************************************/
+.slider {
+    padding: 40px;
+    position: relative;
+}
+
+.slide-img {
+    width: 100%;
+}
+
+.slider button {
+    position: absolute;
+    top: 45%;
+    border: none;
+    background-color: transparent;
+}
+
+.slider button:hover {
+    cursor: pointer;
+    filter: brightness(0.5);
+}
+
+.slider .right {
+    right: 0;
+}
+
+.slider .left {
+    left: 0;
 }
