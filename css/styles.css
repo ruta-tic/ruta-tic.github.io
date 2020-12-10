@@ -1113,13 +1113,16 @@ footer .redes-sociales a:hover {
 
 footer .contact {text-align: right;margin:10px;}
 
-footer a {
+footer a,
+footer li.modal {
     text-decoration: none;
     color: #fff;
 }
 
-footer a:hover {
+footer a:hover,
+footer li.modal:hover {
     color: #b9eaff;
+    cursor: pointer;
 }
 /********************************************************************************/
 /* Recursos multimedia
@@ -1640,7 +1643,7 @@ footer a:hover {
 /********************************************************************************/
 .preview {max-width: 100%;}
 
-#interactivos.expand-image a,
+#interactivos .expand-image a,
 .expand-image a.prev {
     width: 150px;
     position: relative;
@@ -1653,10 +1656,10 @@ footer a:hover {
     transition: all .3s;
 }
 
-#interactivos.expand-image a,
+#interactivos .expand-image a,
 .expand-image a.prev {position: relative;}
 
-#interactivos.expand-image a:after,
+#interactivos .expand-image a:after,
 .expand-image a.prev:after {
     content: "ver vista previa";
     position: absolute;
@@ -1700,4 +1703,39 @@ footer a:hover {
 
 .slider .left {
     left: 0;
+}
+/********************************************************************************/
+/* CREDITS
+/********************************************************************************/
+#creditos {
+    text-align: center;
+}
+
+#creditos .modal-content {
+    overflow: auto;
+    padding-top: 7vh;
+    height: 75vh;
+}
+
+#creditos .close {
+    position: fixed;
+    right: 13%;
+    top: 11%;
+    background-color: #e9e9e9;
+    width: 74%;
+    text-align: right;
+    padding-right: 1%;
+    border: 1px solid #ddd;
+    color: #333;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+#creditos h2 {
+    font-size: 24px;
+    color: #fff;
+    background-color: #7c8f8c;
+    text-align: center;
+    padding: 10px;
+    margin: 2px 0;
 }
