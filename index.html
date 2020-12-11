@@ -14,29 +14,31 @@
 </head>
 <body data-autoload="false" data-display-window="modal" data-window-width="100" data-window-height="100">
     <div id="body">
-        <header data-offset="true">
-            <div class="cont">
+        <header>
+            <div class="header-cont" data-offset="true" >
                 <img src="img/logo_1.png" alt="Ruta TIC" />
                 
                 <div class="btn-menu">
                     <ion-icon size="large" name="menu-outline"></ion-icon>
                 </div>
                 <div class="btn-close">X</div>
-                <nav class="menu-ppal" >
-                    <ul>
-                        <li><a href="#que-es">Inicio</a></li>
-                        <li><a href="#equipo">Nuestro equipo</a></li>
-                        <li><a href="#conocimiento">Generación de conocimiento</a></li>
-                        <li><a href="#eventos">Eventos</a></li>
-                        <li><a href="#productos">Productos</a></li>
-                        <li><a href="#experiencias">Experiencias</a></li>
-                    </ul>
-                    <div class="redes-sociales">
-                        <a class="icono galeria-oscuro" href="https://rutatic.udea.edu.co/crotalus/" target="_blank"></a>
-                        <a class="icono icono-facebook-oscuro" href="https://www.facebook.com/Ruta-de-Apropiaci%C3%B3n-en-Tic-para-la-cualificaci%C3%B3n-docente-109853250380664" target="_blank"></a>
-                        <a class="icono icono-twitter-oscuro" href="https://twitter.com/ruta_tic" target="_blank"></a>
-                    </div>
-                </nav>
+                <div class="nav-bar" >
+                    <nav class="menu-ppal" >
+                        <ul>
+                            <li><a href="#que-es">Inicio</a></li>
+                            <li><a href="#equipo">Nuestro equipo</a></li>
+                            <li><a href="#conocimiento">Generación de conocimiento</a></li>
+                            <li><a href="#eventos">Eventos</a></li>
+                            <li><a href="#productos">Productos</a></li>
+                            <li><a href="#experiencias">Experiencias</a></li>
+                        </ul>
+                        <div class="redes-sociales">
+                            <a class="icono galeria-oscuro" href="https://rutatic.udea.edu.co/crotalus/" target="_blank"></a>
+                            <a class="icono icono-facebook-oscuro" href="https://www.facebook.com/Ruta-de-Apropiaci%C3%B3n-en-Tic-para-la-cualificaci%C3%B3n-docente-109853250380664" target="_blank"></a>
+                            <a class="icono icono-twitter-oscuro" href="https://twitter.com/ruta_tic" target="_blank"></a>
+                        </div>
+                    </nav>
+                </div>
             </div>
         </header>
 
@@ -574,6 +576,10 @@
 
         <section id="eventos">
             <h1>Participación en eventos</h1>
+            <div class="instruction">
+<!-- To Do David -->
+                Utiliza los botones de la izquierda para pasar entre eventos
+            </div>
             <div id="menu-lateral">
                 <button class="btn btn-edutec active" data-menu-id="#edutec"></button>
                 <button class="btn btn-integratic" data-menu-id="#integratic"></button>
@@ -708,7 +714,7 @@
                 </div>
                 <div class="producto gris perceptio">
                     <div class="icono pc-codigo-blanco"></div>
-                    <h3>Cursos casos estudio <strong>Perceptio</strong></h3>
+                    <h3>Curso caso de estudio <strong>Perceptio</strong></h3>
                     <p>Ut suscipit odio ac purus malesuada dictum. Donec ornare leo quam, in hendrerit ex pretium sed. Aenean id accumsan mauris. Donec nibh massa, feugiat et finibus et, facilisis a tellus.</p>
                     <p class="mas"><a class="boton" href="content/productos/perceptio.html">explorar<i class="icono flecha-azul"></i></a></p>
                 </div>
@@ -716,6 +722,10 @@
         </section>
 
         <section id="experiencias">
+            <div class="instruction">
+<!-- To Do David -->
+                Utiliza los botones de la izquierda para pasar entre comentarios
+            </div>
             <div class="cont">
                 <div id="menu-lateral">
                     <button class="btn2 active" data-menu-id="#alex"></button>
@@ -931,26 +941,32 @@
                 <a href="#" class="close">×</a>
                 <div id="credits_subpage">
                     <h2>Créditos</h2>
-
+                    <p>Los créditos a continuación hacen referencia al presente sitio. La información de los créditos y licencias de los recursos vinculados se encuentran en cada uno de ellos.</p>
                     <div>
-                        <h3>Guionización</h3>
-                        <cite>Betsabé Lema Ospina</cite>
+                        <h3>Producción de contenidos</h3>
+                        <cite>Ángela María Valderrama Muñoz<br />
+                        David Herney Bernal García<br />
+                        Diana Patricia Ospina Pineda<br />
+                        Herlaynne Segura Jiménez<br />
+                        Leidy Marcela Palacio Ortiz<br />
+                        María Mercedes Jiménez Narváez<br />
+                        Maribel Salazar Estrada<br />
+                        Marisol Lopera Pérez<br />
+                        Vanessa Arias Gil<br />
+                        Wilmer Alberto Gil Moreno</cite>
                     </div>
                     <div>
                         <h3>Corrección de estilo</h3>
-                        <cite>María José Mercado Castrillón</cite>
+                        <cite>Felipe Sosa Vargas</cite>
                     </div>
                     <div>
                         <h3>Diseño gráfico</h3>
                         <cite>Elizabeth Hernández González</cite>
                     </div>
                     <div>
-                        <h3>Ilustración</h3>
-                        <cite>Felipe Quintana</cite>
-                    </div>
-                    <div>
-                        <h3>Integración de contenidos</h3>
-                        <cite>Santiago Bernal García</cite>
+                        <h3>Implementación técnica</h3>
+                        <cite>Santiago Bernal García <br />
+                        David Herney Bernal García</cite>
                     </div>
                     <div>
                         <h3>Gestión técnica y administrativa</h3>
