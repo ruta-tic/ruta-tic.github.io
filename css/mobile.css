@@ -24,6 +24,7 @@
 
 header {
 	position: relative;
+	min-height: 100px;
 }
 
 header .btn-menu {
@@ -31,14 +32,27 @@ header .btn-menu {
 	justify-content: flex-end;
 	position: absolute;
     align-items: center;
+    top: 30px;
 	bottom: 20px;
 	right: 0;
 	width: 100%;
 	padding-right: 10px;
 	height: 50px;
+	cursor: pointer;
+	
 }
 
-header.scroll_top .btn-menu {
+header .btn-menu:after {
+	width: 50px;
+    z-index: 2;
+    text-align: center;
+
+    content: "<";
+    color: #000;
+    font-size: 50px;
+}
+
+header .scroll_top .btn-menu {
 	display: flex;
 	background: #fff url(../img/logo_1.png) no-repeat 10%;
 	background-size: contain;
@@ -96,9 +110,8 @@ header.scroll_top .redes-sociales {
 header.visible .redes-sociales {
 	display: flex;
 	position: relative;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	flex-wrap: wrap;
-    margin-top: -20px;
     width: 90%;
 }
 
@@ -109,11 +122,26 @@ header.visible .redes-sociales .buscador {
 
 header.visible nav.menu-ppal ul {
 	flex-direction: column;
+	text-align: left;
 }
 
 header.visible nav.menu-ppal ul li a {
 	font-size: 2em;
 	line-height: 1.7em;
+}
+
+header .header-cont .nav-bar {
+	padding: 0 30px;
+}
+
+#body .content {
+	padding: 0 !important;
+	width: 100%;
+	overflow: scroll;
+}
+
+.not-mobile {
+	display: none;
 }
 
 #que-es .que-es {
@@ -139,6 +167,11 @@ header.visible nav.menu-ppal ul li a {
 #conocimiento .col-2.text,
 .modal_container .row .text {
 	width: 100%;
+}
+
+#conocimiento {
+    max-width: 100%;
+    overflow: scroll
 }
 
 #equipo p {
@@ -232,6 +265,11 @@ footer {
 	padding: 10px;
 }
 
+footer ul {
+    margin: 0;
+    padding-left: revert;
+}
+
 #que-es .col-2.video-cont {
 	min-height: 100px;
 }
@@ -265,4 +303,67 @@ footer {
 
 #herramientas .row {
 	padding: 0 30px;
+}
+
+#interactivos .contenidos .cont .name {
+	width: 100%;
+	text-align: center;
+}
+
+#scorm .contenidos .cont .prev,
+#interactivos .contenidos .cont .prev {
+	border-left: none;
+}
+
+#scorm .contenidos .cont, 
+#interactivos .contenidos .cont {
+	justify-content: center;
+}
+
+#scorm .contenidos .description {
+	flex-direction: column;
+	width: 100%;
+	padding: 0;
+}
+
+#perceptio .row {
+	padding: 30px;
+}
+
+/********************************************************************************/
+/* Modal
+/********************************************************************************/
+.modal_container {
+	padding-top: 1vh;
+}
+
+.boxes .modal_container {
+	padding-top: 55px;	
+}
+
+#equipo .modal-content.colab {
+	height: 83vh;
+}
+
+#equipo .modal-content.colab .close {
+	top: 1vh;
+	right: 1%;
+    left: 1%;
+}
+
+#cursos .modal-content .close {
+	right: 0;
+    left: 0;
+    top: 0;
+    width: 98%;
+}
+
+#cursos .modal-content {
+	width: auto;
+    height: auto;
+    max-height: none;
+}
+
+#cursos p.mas {
+	margin: 0 0 0 30px;
 }
