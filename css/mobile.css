@@ -299,6 +299,7 @@ footer ul {
 #interactivos .contenidos .cont {
 	flex-wrap: wrap;
 	border: 1px solid #f3f3f3;
+	padding: 10px 0;
 }
 
 #herramientas .row {
@@ -308,6 +309,12 @@ footer ul {
 #interactivos .contenidos .cont .name {
 	width: 100%;
 	text-align: center;
+}
+
+#scorm .contenidos .cont .name {
+	border-right: none;
+	padding-right: 0;
+	width: 75%;
 }
 
 #scorm .contenidos .cont .prev,
@@ -324,6 +331,12 @@ footer ul {
 	flex-direction: column;
 	width: 100%;
 	padding: 0;
+	margin-bottom: 20px;
+}
+
+#scorm .contenidos .description p {
+	margin-right: 0;
+	width: 90%;
 }
 
 #perceptio .row {
