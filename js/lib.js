@@ -14,41 +14,38 @@ function scrollFunction() {
 var GLOBAL = {};
 GLOBAL.current = 0;
 GLOBAL.imagenes = new Array();
- 
+
 $(document).ready(function() {
     var numImages = 11;
     if (numImages <= 1) {
         $('.right-arrow').css('display', 'none');
         $('.left-arrow').css('display', 'none');
     }
- 
+
     $('.left-arrow').on('click',function() {
         if (GLOBAL.current > 0) {
             GLOBAL.current = GLOBAL.current - 1;
         } else {
             GLOBAL.current = numImages - 3;
         }
- 
+
         $(".carrusel").animate({"left": -($('#investigador_'+GLOBAL.current).position().left)}, 500);
- 
+
         return false;
     });
- 
+
     $('.right-arrow').on('click', function() {
         if (numImages > GLOBAL.current + 3) {
             GLOBAL.current = GLOBAL.current + 1;
         } else {
             GLOBAL.current = 0;
         }
- 
-        $(".carrusel").animate({"left": -($('#investigador_'+GLOBAL.current).position().left)}, 500);
- 
-        return false;
-    }); 
 
-// ==============================================================================================
-// Expand image
-// ==============================================================================================
+        $(".carrusel").animate({"left": -($('#investigador_'+GLOBAL.current).position().left)}, 500);
+
+        return false;
+    });
+
 
 //Ventana modal jQuery
 
@@ -56,7 +53,7 @@ $(document).ready(function() {
         //Cancel the link behavior
         e.preventDefault();
 
-        var id = $(this).attr('data-modal-id');
+        var $modal = $($(this).attr('data-modal-id'));
 
         //Get the screen height and width
         var maskHeight = $(document).height();
@@ -65,19 +62,19 @@ $(document).ready(function() {
         //Get the window height and width
         var winH = $(window).height();
         var winW = $(window).width();
-      
+
         //Set the popup window to center
-        $(id).css('top',  winH/2-$(id).height()/2);
-        $(id).css('left', winW/2-$(id).width()/2);
+        $modal.css('top',  winH/2-$modal.height()/2);
+        $modal.css('left', winW/2-$modal.width()/2);
         $('body').css('position', "static");
         $('body').css('height', "100%");
         $('body').css('overflow', "hidden");
 
         //transition effect
-        $(id).fadeIn(1000);
-    
+        $modal.fadeIn(1000);
+
     });
-    
+
     //if close button is clicked
     $('.window .close').click(function (e) {
         //Cancel the link behavior
@@ -103,7 +100,7 @@ $(document).ready(function() {
         var id = $(this).attr('data-menu-id');
 
         $('.event').hide(500,"swing");
-        $(id).css('position', "static");        
+        $(id).css('position', "static");
         $(id).slideDown(500,"swing");
         $('.btn').removeClass('active');
         $(this).addClass('active');
@@ -119,7 +116,7 @@ $(document).ready(function() {
         $('.btn2').removeClass('active');
         $(this).addClass('active');
     });
-    
+
 //Mostrar
     $('.recurso').click(function(){
         var id = $(this).attr('data-rec-id');

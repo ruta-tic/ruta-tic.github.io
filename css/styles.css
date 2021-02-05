@@ -43,6 +43,26 @@ h3 {
     font-size: 22px;
 }
 
+section {
+    position: relative;
+}
+
+p {
+    line-height: 140%;
+}
+
+ul.data_list li {
+    margin-bottom: 10px;
+    line-height: 140%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 /********************************************************************************/
 /* General
 /********************************************************************************/
@@ -93,6 +113,10 @@ header.scroll_top .btn-close, header .btn-close {
     margin-top: 25px;
 }
 
+.general:hover {
+    background-color: #b9eaff;
+}
+
 .row {
     display: flex;
     align-items: center;
@@ -132,6 +156,15 @@ header.scroll_top .btn-close, header .btn-close {
 #menu-lateral .btn.active, #menu-lateral .btn2.active {
     background-color: #db9e31;
     border-color: #db9e31;
+}
+
+.instruction {
+    margin: auto;
+    text-align: center;
+    font-size: 80%;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px;
 }
 /********************************************************************************/
 /* Iconos
@@ -399,21 +432,34 @@ header.scroll_top .btn-close, header .btn-close {
 /* Header
 /********************************************************************************/
 header {
-    padding: 30px 0 0;
+    padding: 0;
     background-color: #fff;
     position: relative;
+    min-height: 161px;
 }
 
-header .cont {
+header .header-cont {
     max-width: 1200px;
     margin: auto;
-    position: relative;
+}
+
+header .header-cont.scroll_top {
+    max-width: none;
+}
+
+header .header-cont.scroll_top .nav-bar {
+    max-width: 1200px;
+    margin: auto;
 }
 
 header .menu-ppal,
 header img {
-    padding-left: 50px;
+
     padding-bottom: 1px;
+}
+
+header .nav-bar {
+    position: relative;
 }
 
 header .redes-sociales {
@@ -638,7 +684,7 @@ header #navbar .redes-sociales a {
     z-index:1;
     bottom:50%;
 }
- 
+
 #carrusel .right-arrow {
     position:absolute;
     right: 0;
@@ -648,17 +694,17 @@ header #navbar .redes-sociales a {
 /********************************************************************************/
 /* Colaboradores
 /********************************************************************************/
-#equipo .modal-content.colab {
+#modal10 .modal-content.colab {
     overflow: auto;
     z-index: -1;
     padding-top: 5vh;
     padding-bottom: 10vh;
     background-color: #f5f5f5;
     width: 90%;
-    height: 75vh;
+    height: 70vh;
 }
 
-#equipo .modal-content.colab .close {
+#modal10 .modal-content.colab .close {
     position: fixed;
     right: 4%;
     left: 2%;
@@ -668,7 +714,7 @@ header #navbar .redes-sociales a {
     padding-right: 2%;
     z-index: 1;
 }
-#equipo .modal-content .colaboradores {
+#modal10 .modal-content .colaboradores {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -677,7 +723,7 @@ header #navbar .redes-sociales a {
     background: url(../img/fondo-formas1.png) repeat-y top;
 }
 
-#equipo .modal-content .fondo {
+#modal10 .modal-content .fondo {
     color: #d8d8d8;
     z-index: -1;
     position: absolute;
@@ -686,23 +732,23 @@ header #navbar .redes-sociales a {
     font-size: 70px;
 }
 
-#equipo .modal-content .colaboradores .colaborador {
+#modal10 .modal-content .colaboradores .colaborador {
     width: 330px;
     margin: 40px 0;
 }
 
-#equipo .modal-content .colaboradores .colaborador.par {
+#modal10 .modal-content .colaboradores .colaborador.par {
     margin-top: 80px;
 }
 
-#equipo .modal-content .nombre {
+#modal10 .modal-content .nombre {
     font-weight: bold;
     width: 75%;
     position: relative;
     font-size: 1.1em;
 }
 
-#equipo .modal-content .nombre:before {
+#modal10 .modal-content .nombre:before {
     content: "";
     width: 90px;
     height: 90px;
@@ -714,7 +760,7 @@ header #navbar .redes-sociales a {
     left: -20px;
 }
 
-#equipo .modal-content .colaboradores ul {
+#modal10 .modal-content .colaboradores ul {
     padding-left: 0;
     list-style:none;
 }
@@ -722,15 +768,17 @@ header #navbar .redes-sociales a {
 /* Modal
 /********************************************************************************/
 .modal_container {
-    display: none; 
-    position: fixed; 
-    z-index: 2;
+    display: none;
+    position: fixed;
+    z-index: 999;
     padding-top: 10vh;
-    left: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 100%; 
-    overflow: auto; 
+    height: 100%;
+    overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 }
@@ -759,7 +807,7 @@ header #navbar .redes-sociales a {
     text-align: justify;
 }
 
-.modal_container .row .text h2 {margin: 0}
+.modal_container .row .text h2 {margin: 0; text-align: left;}
 .modal_container .row .text h4 {margin: 20px 0 0;}
 
 .modal_container .row .col-2 {
@@ -828,7 +876,7 @@ header #navbar .redes-sociales a {
 /* Conocimiento
 /********************************************************************************/
 #conocimiento {
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -999,7 +1047,7 @@ header #navbar .redes-sociales a {
     color: #676767;
     background-color: #fff;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    
+
 }
 
 #productos .producto.moodle:hover {
@@ -1048,7 +1096,7 @@ header #navbar .redes-sociales a {
 }
 
 #experiencias .col-2.text div {
-    background: url(../img/comillas1.png) no-repeat top left, 
+    background: url(../img/comillas1.png) no-repeat top left,
         url(../img/comillas2.png) no-repeat bottom right;
 }
 
@@ -1113,13 +1161,16 @@ footer .redes-sociales a:hover {
 
 footer .contact {text-align: right;margin:10px;}
 
-footer a {
+footer a,
+footer li.modal {
     text-decoration: none;
     color: #fff;
 }
 
-footer a:hover {
+footer a:hover,
+footer li.modal:hover {
     color: #b9eaff;
+    cursor: pointer;
 }
 /********************************************************************************/
 /* Recursos multimedia
@@ -1333,20 +1384,21 @@ footer a:hover {
     border-left: 1px solid #f3f3f3;
     border-right: 1px solid #f3f3f3;
     padding: 5px 20px;
-    cursor: pointer;
-    filter: grayscale(1);
 }
 
 #interactivos .contenidos .cont .info a {
+    cursor: pointer;
+    filter: grayscale(1);
     text-decoration: none;
-}
-
-#interactivos .contenidos .cont .info:hover {
-    filter: grayscale(0);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
 }
 
 #interactivos .contenidos .cont .info a:hover {
     color: #b9eaff;
+    filter: grayscale(0);
 }
 
 #interactivos .contenidos .cont .prev {
@@ -1369,7 +1421,8 @@ footer a:hover {
     margin: auto;
     min-width: 30%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
 
 #interactivos .iconos {
@@ -1394,9 +1447,23 @@ footer a:hover {
 /********************************************************************************/
 /* Contenidos scorm
 /********************************************************************************/
+#scorm {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#scorm h2 {
+    background-color: #777;
+    color: #fff;
+    padding: 10px;
+}
+
 #scorm .contenidos {
     display: flex;
     flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 50px;
 }
 
 #scorm .contenidos .cont {
@@ -1411,6 +1478,15 @@ footer a:hover {
 #scorm .contenidos .scorm {
     min-width: 40px;
 }
+#interactivos .contenidos .cont .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 110px;
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+    padding: 5px 20px;
+}
 
 #scorm .contenidos .cont .info {
     display: flex;
@@ -1420,7 +1496,21 @@ footer a:hover {
     border-left: 1px solid #f3f3f3;
     border-right: 1px solid #f3f3f3;
     padding: 5px 20px;
+}
+
+#scorm .contenidos .cont .info a {
     cursor: pointer;
+    filter: grayscale(1);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+#scorm .contenidos .cont .info a:hover {
+    color: #b9eaff;
+    filter: grayscale(0);
 }
 
 #scorm .contenidos .cont .prev {
@@ -1431,13 +1521,24 @@ footer a:hover {
 }
 
 #scorm .contenidos .cont .name {
-    min-width: 200px;
+    min-width: 250px;
+    width: 15vw;
     font-size: 18px;
     border-right: 1px solid #f3f3f3;
     padding-right: 20px;
 }
 
-#scorm .contenidos .description {padding: 5px 20px;}
+#scorm .contenidos .description {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+#scorm .contenidos .description p {
+    width: 70%;
+    margin-right: 10px;
+}
 
 #scorm .iconos .download {
     background: url(../img/spritesheet2.png) no-repeat;
@@ -1505,14 +1606,14 @@ footer a:hover {
 #cursos .salud2 { top: 83px; left: 663px;}
 #cursos .salud2 img {left: 53%; top: -8%;}
 #cursos .salud2:hover:after {
-    content: "Tecnologías en salud";
+    content: "Salud y educación";
     bottom: 160px;
     left: 48px;
 }
 #cursos .salud1 { left: 574px; top: -6px;}
 #cursos .salud1 img {left: 43%; top: -9%;}
 #cursos .salud1:hover:after {
-    content: "Salud y educación";
+    content: "Tecnologías en salud";
     bottom: 220px;
     left: 46px;
 }
@@ -1555,17 +1656,63 @@ footer a:hover {
 
 #cursos .modal-content {
     background-color: #f2f2f2;
+    margin: auto;
+    padding: 1% 2% 1% 4%;
     padding-top: 30px;
+    width: 72%;
+    height: auto;
+    max-height: 80vh;
+    position: relative;
+    overflow: auto;
 }
 
 #cursos .modal-content .close {
-    position: absolute;
-    right: 0px;
-    top: 0;
-    width: 98%;
+    position: fixed;
+    right: 13%;
+    top: 10vh;
+    width: 74%;
     text-align: right;
     background-color: #e8e8e8;
     padding-right: 2%;
+}
+
+#cursos .modal_container .slider {
+    max-height: 50vh;
+    margin: auto;
+}
+
+#cursos .modal_container .slider img {
+    max-width: 400px;
+    max-height: 400px;
+    margin: auto;
+}
+
+#cursos .botones {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#cursos .general {
+    width: 100px;
+    text-align: center;
+    margin-top: 0;
+}
+
+#cursos .general a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#cursos p.mas {
+    margin: 0 50px;
+}
+/********************************************************************************/
+/* Perceptio
+/********************************************************************************/
+#perceptio {
+    max-width: 1200px;
+    margin: auto;
 }
 /********************************************************************************/
 /* Tables
@@ -1610,7 +1757,7 @@ footer a:hover {
 /********************************************************************************/
 .preview {max-width: 100%;}
 
-.expand-image a {
+.expand-image a.prev {
     width: 150px;
     position: relative;
     transition: all .3s;
@@ -1622,9 +1769,9 @@ footer a:hover {
     transition: all .3s;
 }
 
-.expand-image a {position: relative;}
+.expand-image a.prev {position: relative;}
 
-.expand-image a:after {
+.expand-image a.prev:after {
     content: "ver vista previa";
     position: absolute;
     width: 100%;
@@ -1636,4 +1783,70 @@ footer a:hover {
     /*z-index: 1;*/
     background-color: #777;
     color: #fff;
+}
+/********************************************************************************/
+/* SLIDER
+/********************************************************************************/
+.slider {
+    padding: 40px;
+    position: relative;
+}
+
+.slide-img {
+    width: 100%;
+}
+
+.slider button {
+    position: absolute;
+    top: 45%;
+    border: none;
+    background-color: transparent;
+}
+
+.slider button:hover {
+    cursor: pointer;
+    filter: brightness(0.5);
+}
+
+.slider .right {
+    right: 0;
+}
+
+.slider .left {
+    left: 0;
+}
+/********************************************************************************/
+/* CREDITS
+/********************************************************************************/
+#creditos {
+    text-align: center;
+}
+
+#creditos .modal-content {
+    overflow: auto;
+    padding-top: 7vh;
+    height: 75vh;
+}
+
+#creditos .close {
+    position: fixed;
+    right: 13%;
+    top: 11%;
+    background-color: #e9e9e9;
+    width: 74%;
+    text-align: right;
+    padding-right: 1%;
+    border: 1px solid #ddd;
+    color: #333;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+#creditos h2 {
+    font-size: 24px;
+    color: #fff;
+    background-color: #7c8f8c;
+    text-align: center;
+    padding: 10px;
+    margin: 2px 0;
 }
