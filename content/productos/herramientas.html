@@ -26,7 +26,7 @@
         <header>
             <div class="header-cont" data-offset="true">
                 <img src="../../img/logo_1.png" alt="Ruta TIC" />
-                
+
                 <div class="btn-menu">
                     <ion-icon size="large" name="menu-outline"></ion-icon>
                 </div>
@@ -54,16 +54,36 @@
         <div id="herramientas">
             <div class="row">
                 <div class="col-2 text">
-                    <h2>Herramientas de Software</h2>
-                    <p>Praesent eu porttitor sapien. Pellentesque euismod ante eget porttitor faucibus. Duis lectus sapien, elementum id porttitor sit amet, venenatis at lacus. Praesent fringilla enim ultricies justo sagittis auctor. Pellentesque faucibus elit sit amet est bibendum aliquet. Pellentesque ut eros nec sapien eleifend placerat. Suspendisse ultrices lacus ut erat dapibus, nec blandit nisl venenatis. Quisque urna nunc, dignissim quis aliquam at, ultrices eu lacus. Maecenas iaculis enim sit amet risus consequat, tempor porttitor leo viverra.</p>
+                    <h2>Herramientas de software</h2>
+                    <p>La plataforma utilizada para la investigación fue el LMS Moodle. Una de las principales razones para seleccionar dicho LMS fue su licencia libre GNU/GPL que permite adaptar el software y tener acceso libre a su código fuente.</p>
+                    <p>Algunas de las funcionalidades necesarias para el proyecto no se encontraban disponibles o requerían modificaciones, por lo que se prentede entregar los desarrollos que fueron necesarios con el fin de que puedan ser aprovechados por otras personas. Todos los desarrollos se entregan también con licencia GNU/GPL.</p>
+                    <p>Las herramientas desarrolladas fueron probadas en la versión 3.6+ de Moodle que fue la elegida para el proyecto, cualquier versión diferente requiere que dichas funcionalidades sean probadas adecuadamente y pueden requerir adaptaciones. Las herramientas son:</p>
+                    <ul class="data_list">
+                        <li>
+                            <strong>Tema gráfico: </strong> se construyó el componente de tipo tema gráfico "RutaTIC". Se encuntra disponible en: <a href="https://github.com/ruta-tic/moodle-theme_rutatic" target="_blank">https://github.com/ruta-tic/moodle-theme_rutatic</a>. Este tema cuenta con algunas funcionalidades especiales tales como una página de inicio con múltiples controles para publicar información, componentes dinámicos para interactuar con los contenidos (ventanas emergentes, acordeón, entre otros), adaptabilidad a diferentes dispositivos, entre muchas otras.
+                        </li>
+                        <li>
+                            <strong>Mejorando SCORM: </strong> este componente, de tipo "local", se construyó como una herramienta propuesta para mejorar las funcionalidades de base de los paquetes SCORM. Permite el control de actividades interactivas multiusuario implementando control en vivo mediante la tecnología de Web sockets. El proyecto se encuentra disponible en <a href="https://github.com/ruta-tic/moodle-local_tepuy" target="_blank">https://github.com/ruta-tic/moodle-local_tepuy</a>.
+                        </li>
+                        <li>
+                            <strong>Plantilla de contenidos: </strong> para facilitar la implementación de contenidos en SCORM, se personalizó la herramienta <a href="https://github.com/davidherney/tepuy" target="_blank">"Tepuy"</a> adaptándola a las necesidades del proyecto, tanto gráficas como funcionales. Esta plantilla brinda la posibilidad de construir contenidos para ser empaquetados en SCORM o para ser usados como páginas HTML, permite contenidos interactivos y actividades como cuestionarios, arrastrar y soltar, crucigramas, ordenar, entre otras; todo esto sin necesidad de programación, simplemente mediante el uso de etiquetas HTML. En el proyecto se personalizaron dos plantillas, una para los cursos de la ruta que se encuentra disponible en <a href="https://github.com/ruta-tic/contenidos/tree/master/plantilla" target="_blank">https://github.com/ruta-tic/contenidos/tree/master/plantilla</a> y otra para el curso de ABAP que se encuentra disponible en <a href="https://github.com/ruta-tic/contenidos/tree/master/plantilla_perceptio" target="_blank">https://github.com/ruta-tic/contenidos/tree/master/plantilla_perceptio</a>. Una adaptación de la plantilla, desarrollada para realizar autoevaluaciones, se encuenta disponible en <a href="https://github.com/ruta-tic/contenidos/tree/master/plantilla_perceptio_rubrica" target="_blank">https://github.com/ruta-tic/contenidos/tree/master/plantilla_perceptio_rubrica</a>.
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-2">
-<!-- ToDo David -->
-                    <h1>Imágenes de prueba</h1>
                     <div class="slider">
-                        <img class="slide-img" src="herramientas/prueba1.png">
-                        <img class="slide-img" src="herramientas/prueba2.png">
-                        <img class="slide-img" src="herramientas/prueba3.png">
+                        <img class="slide-img" src="herramientas/home1.jpg">
+                        <img class="slide-img" src="herramientas/home2.jpg">
+                        <img class="slide-img" src="herramientas/login.jpg">
+                        <img class="slide-img" src="herramientas/my.jpg">
+                        <img class="slide-img" src="herramientas/curso1.jpg">
+                        <img class="slide-img" src="herramientas/curso2.jpg">
+                        <img class="slide-img" src="herramientas/plantilla1.jpg">
+                        <img class="slide-img" src="herramientas/plantilla2.jpg">
+                        <img class="slide-img" src="herramientas/plantilla3.jpg">
+                        <img class="slide-img" src="herramientas/plantilla4.jpg">
+                        <img class="slide-img" src="herramientas/plantilla5.jpg">
+                        <img class="slide-img" src="herramientas/plantilla6.jpg">
 
                         <button class="left" onclick="current(-1)"><div class="icono flecha-atras"></button>
                         <button class="right" onclick="current(1)"><div class="icono flecha-adelante"></div></button>
@@ -164,7 +184,6 @@
     </div>
 
 <script>
-/*ToDo David*/
     var slide_index = 1;
     show_img(slide_index);
 
@@ -178,9 +197,9 @@
         if (n > x.length) {slide_index = 1}
         if (n < 1) {slide_index = x.length}
         for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
+            x[i].style.display = "none";
         }
-        x[slide_index-1].style.display = "block";  
+        x[slide_index-1].style.display = "block";
     }
 </script>
 </body>

@@ -43,6 +43,26 @@ h3 {
     font-size: 22px;
 }
 
+section {
+    position: relative;
+}
+
+p {
+    line-height: 140%;
+}
+
+ul.data_list li {
+    margin-bottom: 10px;
+    line-height: 140%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 /********************************************************************************/
 /* General
 /********************************************************************************/
@@ -139,10 +159,12 @@ header.scroll_top .btn-close, header .btn-close {
 }
 
 .instruction {
-    width: 400px;
     margin: auto;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 80%;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px;
 }
 /********************************************************************************/
 /* Iconos
@@ -432,7 +454,7 @@ header .header-cont.scroll_top .nav-bar {
 
 header .menu-ppal,
 header img {
-    
+
     padding-bottom: 1px;
 }
 
@@ -662,7 +684,7 @@ header #navbar .redes-sociales a {
     z-index:1;
     bottom:50%;
 }
- 
+
 #carrusel .right-arrow {
     position:absolute;
     right: 0;
@@ -672,17 +694,17 @@ header #navbar .redes-sociales a {
 /********************************************************************************/
 /* Colaboradores
 /********************************************************************************/
-#equipo .modal-content.colab {
+#modal10 .modal-content.colab {
     overflow: auto;
     z-index: -1;
     padding-top: 5vh;
     padding-bottom: 10vh;
     background-color: #f5f5f5;
     width: 90%;
-    height: 75vh;
+    height: 70vh;
 }
 
-#equipo .modal-content.colab .close {
+#modal10 .modal-content.colab .close {
     position: fixed;
     right: 4%;
     left: 2%;
@@ -692,7 +714,7 @@ header #navbar .redes-sociales a {
     padding-right: 2%;
     z-index: 1;
 }
-#equipo .modal-content .colaboradores {
+#modal10 .modal-content .colaboradores {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -701,7 +723,7 @@ header #navbar .redes-sociales a {
     background: url(../img/fondo-formas1.png) repeat-y top;
 }
 
-#equipo .modal-content .fondo {
+#modal10 .modal-content .fondo {
     color: #d8d8d8;
     z-index: -1;
     position: absolute;
@@ -710,23 +732,23 @@ header #navbar .redes-sociales a {
     font-size: 70px;
 }
 
-#equipo .modal-content .colaboradores .colaborador {
+#modal10 .modal-content .colaboradores .colaborador {
     width: 330px;
     margin: 40px 0;
 }
 
-#equipo .modal-content .colaboradores .colaborador.par {
+#modal10 .modal-content .colaboradores .colaborador.par {
     margin-top: 80px;
 }
 
-#equipo .modal-content .nombre {
+#modal10 .modal-content .nombre {
     font-weight: bold;
     width: 75%;
     position: relative;
     font-size: 1.1em;
 }
 
-#equipo .modal-content .nombre:before {
+#modal10 .modal-content .nombre:before {
     content: "";
     width: 90px;
     height: 90px;
@@ -738,7 +760,7 @@ header #navbar .redes-sociales a {
     left: -20px;
 }
 
-#equipo .modal-content .colaboradores ul {
+#modal10 .modal-content .colaboradores ul {
     padding-left: 0;
     list-style:none;
 }
@@ -746,15 +768,17 @@ header #navbar .redes-sociales a {
 /* Modal
 /********************************************************************************/
 .modal_container {
-    display: none; 
-    position: fixed; 
-    z-index: 2;
+    display: none;
+    position: fixed;
+    z-index: 999;
     padding-top: 10vh;
-    left: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 100%; 
-    overflow: auto; 
+    height: 100%;
+    overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 }
@@ -783,7 +807,7 @@ header #navbar .redes-sociales a {
     text-align: justify;
 }
 
-.modal_container .row .text h2 {margin: 0}
+.modal_container .row .text h2 {margin: 0; text-align: left;}
 .modal_container .row .text h4 {margin: 20px 0 0;}
 
 .modal_container .row .col-2 {
@@ -852,7 +876,7 @@ header #navbar .redes-sociales a {
 /* Conocimiento
 /********************************************************************************/
 #conocimiento {
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -1023,7 +1047,7 @@ header #navbar .redes-sociales a {
     color: #676767;
     background-color: #fff;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    
+
 }
 
 #productos .producto.moodle:hover {
@@ -1072,7 +1096,7 @@ header #navbar .redes-sociales a {
 }
 
 #experiencias .col-2.text div {
-    background: url(../img/comillas1.png) no-repeat top left, 
+    background: url(../img/comillas1.png) no-repeat top left,
         url(../img/comillas2.png) no-repeat bottom right;
 }
 
