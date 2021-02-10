@@ -1039,7 +1039,7 @@ header #navbar .redes-sociales a {
 #productos .producto.paquetes:hover > .icono {background-position: -187px -167px;}
 #productos .producto.herramientas:hover > .icono {background-position: -5px -248px;}
 #productos .producto.ruta:hover > .icono {background-position: -187px -248px;}
-#productos .producto.perceptio:hover > .icono {background-position: -314px -5px;}
+#productos .producto.casoestudio:hover > .icono {background-position: -314px -5px;}
 
 #productos .producto:hover {
     transform: scale(1.05);
@@ -1551,6 +1551,11 @@ footer li.modal:hover {
 /********************************************************************************/
 /* Contenidos Cursos
 /********************************************************************************/
+#pre-cursos {
+    max-width: 900px;
+    margin: auto;
+}
+
 #cursos h1 {
     width: 150px;
     position: absolute;
@@ -1679,12 +1684,13 @@ footer li.modal:hover {
 #cursos .modal_container .slider {
     max-height: 50vh;
     margin: auto;
+    text-align: center;
 }
 
 #cursos .modal_container .slider img {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 800px;
     margin: auto;
+    border: 1px solid;
 }
 
 #cursos .botones {
@@ -1700,7 +1706,7 @@ footer li.modal:hover {
 }
 
 #cursos .general a {
-    color: #fff;
+        color: #fff;
     text-decoration: none;
 }
 
@@ -1708,12 +1714,34 @@ footer li.modal:hover {
     margin: 0 50px;
 }
 /********************************************************************************/
-/* Perceptio
+/* Caso de estudio
 /********************************************************************************/
-#perceptio {
+#casoestudio {
     max-width: 1200px;
     margin: auto;
 }
+
+#casoestudio .botones {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#casoestudio .general {
+    width: 100px;
+    text-align: center;
+    margin-top: 0;
+}
+
+#casoestudio .general a {
+        color: #fff;
+    text-decoration: none;
+}
+
+#casoestudio p.mas {
+    margin: 0 50px;
+}
+
 /********************************************************************************/
 /* Tables
 /********************************************************************************/
