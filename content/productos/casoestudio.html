@@ -26,7 +26,7 @@
         <header>
             <div class="header-cont" data-offset="true">
                 <img src="../../img/logo_1.png" alt="Ruta TIC" />
-                
+
                 <div class="btn-menu">
                     <ion-icon size="large" name="menu-outline"></ion-icon>
                 </div>
@@ -51,29 +51,36 @@
             </div>
         </header>
 
-        <div id="perceptio">
-            
+        <div id="casoestudio">
+
             <div class="row">
                 <div class="col-2">
                     <div class="text">
-                        <h2>Curso caso de estudio Perceptio</h2>
-                        <p>Praesent eu porttitor sapien. Pellentesque euismod ante eget porttitor faucibus. Duis lectus sapien, elementum id porttitor sit amet, venenatis at lacus. Praesent fringilla enim ultricies justo sagittis auctor. Pellentesque faucibus elit sit amet est bibendum aliquet. Pellentesque ut eros nec sapien eleifend placerat. Suspendisse ultrices lacus ut erat dapibus, nec blandit nisl venenatis. Quisque urna nunc, dignissim quis aliquam at, ultrices eu lacus. Maecenas iaculis enim sit amet risus consequat, tempor porttitor leo viverra.</p>
+                        <h2>Curso <strong>caso de estudio</strong></h2>
+                        <p>Para la implementación del caso de estudio se eligió el tema <em>Advanced Business Application Programming - ABAP</em>. Este tema fue seleccionado por personas de la empresa Perceptio que participaron como estudiantes en los diplomados de la Ruta y que aplicaron los conocimientos adquiridos para la construcción del curso y para su ofrecimiento al interior de la empresa, a su vez, el equipo de investigación apoyó la construcción de los materiales del curso acorde a las definiciones de los expertos temáticos de Perceptio.</p>
+                        <p>En palabras de los expertos que lo construyeron: <cite>"Este curso virtual es una plataforma de lanzamiento profesional que abre las puertas del mundo laboral a sus estudiantes. Es el punto de partida para obtener todo el espectro de conocimiento ABAP y la vinculación directa a SAP mediante la certificación oficial. Este curso permitirá que los estudiantes obtengan una preparación más balanceada, lo que hará que su rendimiento para la empresa sea mejor."</cite></p>
+                        <p>A continuación se entrega el curso producto de este trabajo para que pueda ser importado dentro de una plataforma LMS Moodle (probado en la versión 3.6+).</p>
                     </div>
-                </div>
+                    <div class="botones">
+                        <div class="general"><a href="casoestudio/abap.mbz" target="_blank">Dercargar</a></div>
+                        <p class="mas"><a href="https://rutatic.udea.edu.co/course/view.php?id=37" target="_blank">Ver en línea <i class="icono flecha-azul"></i></a></p>
+                    </div>
+            </div>
                 <div class="col-2">
-<!-- ToDo David -->
-                    <h1>Imágenes de prueba</h1>
                     <div class="slider">
-                        <img class="slide-img" src="herramientas/prueba1.png">
-                        <img class="slide-img" src="herramientas/prueba2.png">
-                        <img class="slide-img" src="herramientas/prueba3.png">
+                        <img class="slide-img" src="casoestudio/abap1.jpg">
+                        <img class="slide-img" src="casoestudio/abap2.jpg">
+                        <img class="slide-img" src="casoestudio/abap3.jpg">
+                        <img class="slide-img" src="casoestudio/abap4.jpg">
+                        <img class="slide-img" src="casoestudio/abap5.jpg">
+                        <img class="slide-img" src="casoestudio/abap6.jpg">
 
                         <button class="left" onclick="current(-1)"><div class="icono flecha-atras"></button>
                         <button class="right" onclick="current(1)"><div class="icono flecha-adelante"></div></button>
                     </div>
                 </div>
             </div>
-        
+
         </div>
     </div>
 
@@ -154,7 +161,7 @@
                 </div>
 
                  <div class="editions">
-                    1ª edición: Diciembre 2020<br />
+                    1ª edición: diciembre 2020<br />
                 </div>
                 <div>
                     <p>
@@ -169,7 +176,6 @@
 
 <script>
 
-/*ToDo David*/
     var slide_index = 1;
     show_img(slide_index);
 
@@ -183,9 +189,9 @@
         if (n > x.length) {slide_index = 1}
         if (n < 1) {slide_index = x.length}
         for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
+        x[i].style.display = "none";
         }
-        x[slide_index-1].style.display = "block";  
+        x[slide_index-1].style.display = "block";
     }
 </script>
 
